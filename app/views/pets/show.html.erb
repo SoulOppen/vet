@@ -2,6 +2,27 @@
 
 <%= render @pet %>
 
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Promedio altura</th>
+      <th>Promedio peso</th>
+      <th>Max altura</th>
+      <th>Max peso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%=@pet.id%></td>
+      <td><%=@pet.mean_height%></td>
+      <td><%=@pet.mean_weight%></td>
+      <td><%=@pet.max_height%></td>
+      <td><%=@pet.max_weight%></td>
+    </tr>
+  </tbody>
+</table>
+
 <div>
   <%= link_to "Edit this pet", edit_pet_path(@pet) %> |
   <%= link_to "Back to pets", pets_path %>
