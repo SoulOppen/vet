@@ -13,5 +13,14 @@
     <strong>Birthdate:</strong>
     <%= pet.birthdate %>
   </p>
-
+<th>
+    <strong>Historial:</strong> <%=pet.q_history%>
+  </th>
+  <td>
+    <% pet.pet_histories.each do |p|%>
+      <ul>
+        <li>Peso:<%= p.weight %>/Altura:<%= p.height%></li>
+      </ul>
+    <%end%>
+  </td> 
 </div>

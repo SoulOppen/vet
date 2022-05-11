@@ -3,7 +3,7 @@ class PetsController < ApplicationController
 
   # GET /pets or /pets.json
   def index
-    @pets = Pet.all
+    @pets = Pet.eager_load(:pet_histories)
   end
 
   # GET /pets/1 or /pets/1.json
