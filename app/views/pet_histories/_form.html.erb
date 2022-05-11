@@ -10,7 +10,10 @@
       </ul>
     </div>
   <% end %>
-
+  <div>
+    <%= form.label :Pets, style: "display: block" %>
+    <%= form.select :pet_id, options_from_collection_for_select(@pets, :id, :name)%>
+  </div>
   <div>
     <%= form.label :weight, style: "display: block" %>
     <%= form.text_field :weight %>
