@@ -5,6 +5,7 @@
 <div id="clients">
   <% @clients.each do |client| %>
     <%= render client %>
+    <strong>Cantdida de mascotas:</strong> <%=client.q_mascotas%>
     <p>
       <%= link_to "Show this client", client %>
     </p>

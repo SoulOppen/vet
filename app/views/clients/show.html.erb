@@ -2,6 +2,25 @@
 
 <%= render @client %>
 
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Max altura</th>
+      <th>Max peso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @client.pets.each do |p|%>
+    <tr>
+      <td><%=p.name%></td>
+      <td><%=p.max_height%></td>
+      <td><%=p.max_weight%></td>
+    </tr>
+    <%end%>
+  </tbody>
+</table>
+
 <div>
   <%= link_to "Edit this client", edit_client_path(@client) %> |
   <%= link_to "Back to clients", clients_path %>
